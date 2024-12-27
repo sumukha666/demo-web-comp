@@ -4,6 +4,7 @@
   --secondaryColor: #d6ad60;
   --white: #ffffff;
   --black: #000000;
+  --borderRadius: 0.25rem;
 }
 
 body {
@@ -32,4 +33,21 @@ body {
   color: var(--white);
   font-size: 20px;
   font-weight: normal;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--white);
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--white);
+  border-radius: var(--borderRadius);
+  margin-left: 1rem;
+}
+.nav-link:hover {
+  background-color: var(--background-surface);
+  color: var(--black);
+  border-color: var(--black);
 }
