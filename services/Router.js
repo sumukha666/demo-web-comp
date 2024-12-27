@@ -12,15 +12,14 @@ const Router = {
     });
     this.go(location.pathname);
   },
-  go(route, addToHistory) {
+  go(route, addToHistory=true) {
     if (addToHistory) {
       history.pushState({ route }, "", route);
     }
     let pageElement = null;
     switch (route) {
       case "/":
-        pageElement = document.createElement("h1");
-        pageElement.textContent = "Facts page";
+        pageElement = document.createElement('facts-page');
         break;
       case "/breeds":
         pageElement = document.createElement("h1");
